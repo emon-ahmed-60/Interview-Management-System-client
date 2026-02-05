@@ -27,27 +27,27 @@ export default function ApplicantForm() {
         <input
           placeholder="Full Name"
           {...register("name", { required: true })}
-          className="p-2 rounded bg-bg border border-gray-600"
+          className="p-2 rounded bg-neutral border border-gray-600"
         />
         {errors.name && <span className="text-red-500">Name is required</span>}
 
         <input
           placeholder="Email"
           {...register("email", { required: true })}
-          className="p-2 rounded bg-bg border border-gray-600"
+          className="p-2 rounded bg-neutral border border-gray-600"
         />
         {errors.email && <span className="text-red-500">Email is required</span>}
 
         <input
           placeholder="Phone"
           {...register("phone", { required: true })}
-          className="p-2 rounded bg-bg border border-gray-600"
+          className="p-2 rounded bg-neutral border border-gray-600"
         />
         {errors.phone && <span className="text-red-500">Phone is required</span>}
 
         <select
           {...register("position", { required: true })}
-          className="p-2 rounded bg-bg border border-gray-600"
+          className="p-2 rounded bg-neutral border border-gray-600"
         >
           <option className="bg-neutral" value="">Select Position</option>
           <option className="bg-neutral" value="Frontend Developer">Frontend Developer</option>

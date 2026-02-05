@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
-
+import { useAddApplicant } from "../hooks/useApplicants";
 
 export default function ApplicantForm() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
-  
+  const { mutate } = useAddApplicant();
 
   const onSubmit = (data) => {
-    console.log(data);
+    mutate(data);
     reset();
   };
 

@@ -1,16 +1,62 @@
-# React + Vite
+# Interview Manager – Client Side (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Interview Management System (Client Side)** built with **React**.  
+This application allows users to submit job applications and manage interview data through a clean dashboard UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 📝 Job Application Form
+- Submit applicant information:
+  - Full Name
+  - Email
+  - Phone
+  - Position
+- Form validation
+- Smooth UI with consistent color theme
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📊 Applicants Dashboard
+- View all submitted applicants
+- Update interview details:
+  - Interview Date
+  - Interview Time
+  - Marks
+  - Status (Pending / Selected / Rejected)
+- Delete applicants
+- Real-time UI updates
 
-## Expanding the ESLint configuration
+### 🔔 Notifications
+- Success toast on update
+- Success toast on delete
+- Error toast on failure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎨 UI / UX
+- Dark themed modern design
+- Fully responsive (Desktop & Mobile)
+- Clean spacing & alignment
+- Native date & time pickers
+- Status-based color indicators
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+- React
+- Vite
+- Tailwind CSS
+- TanStack Query
+- Axios
+- React Toastify
+
+---
+
+## 🎨 Color Palette
+
+```css
+--color-primary: #4F46E5;
+--color-secondary: #1E293B;
+--color-accent: #10B981;
+--color-neutral: #020617;
+--color-base-100: #E5E7EB;

@@ -28,7 +28,7 @@ export const useUpdateApplicant = () => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: async ({ id, updates }) => {
-      const res = await API.put(`/applicants/${id}`, updates);
+      const res = await API.patch(`/applicants/${id}`, updates);
       return res.data;
     },
     onSuccess: () => {

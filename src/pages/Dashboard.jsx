@@ -80,15 +80,15 @@ export default function Dashboard() {
           <div
             key={app._id}
             className="
-              bg-secondary rounded mb-4
-              grid grid-cols-1 md:grid-cols-9
-              gap-4 items-center
-              px-6 py-4
-            "
+        bg-secondary rounded-lg mb-4
+        grid grid-cols-1 md:grid-cols-8
+        gap-5 items-center
+        px-6 py-5
+      "
           >
             {/* Name */}
             <div className="md:col-span-2">
-              <p className="font-semibold">{app.name}</p>
+              <p className="font-semibold text-base-100">{app.name}</p>
               <p className="text-sm text-gray-400">{app.position}</p>
             </div>
 
@@ -100,10 +100,11 @@ export default function Dashboard() {
                 handleChange(app._id, "interviewDate", e.target.value)
               }
               className="
-                bg-neutral border border-gray-600
-                px-3 py-2 rounded
-                text-base-100
-              "
+          bg-neutral border border-gray-600
+          h-[42px] px-1 rounded
+          text-[15px] text-base-100
+          [color-scheme:dark]
+        "
             />
 
             {/* Time */}
@@ -114,10 +115,11 @@ export default function Dashboard() {
                 handleChange(app._id, "interviewTime", e.target.value)
               }
               className="
-                bg-neutral border border-gray-600
-                px-3 py-2 rounded
-                text-base-100
-              "
+          bg-neutral border border-gray-600
+          h-[42px] px-2 rounded
+          text-[15px] text-base-100
+          [color-scheme:dark]
+        "
             />
 
             {/* Marks */}
@@ -127,29 +129,26 @@ export default function Dashboard() {
               max="100"
               placeholder="Marks"
               value={current.marks || ""}
-              onChange={(e) =>
-                handleChange(app._id, "marks", e.target.value)
-              }
+              onChange={(e) => handleChange(app._id, "marks", e.target.value)}
               className="
-                bg-neutral border border-gray-600
-                px-3 py-2 rounded
-                text-center
-                placeholder:text-center
-                text-base-100
-              "
+          bg-neutral border border-gray-600
+          h-[42px] px-3 rounded
+          text-center text-[15px] text-base-100
+          placeholder:text-center
+          appearance-auto
+        "
             />
 
             {/* Status */}
             <select
               value={current.status}
-              onChange={(e) =>
-                handleChange(app._id, "status", e.target.value)
-              }
+              onChange={(e) => handleChange(app._id, "status", e.target.value)}
               className={`
-                bg-neutral border border-gray-600
-                px-3 py-2 rounded
-                ${statusColor(current.status)}
-              `}
+          bg-neutral border border-gray-600
+          h-[42px] pl-3 rounded
+          text-[15px]
+          ${statusColor(current.status)}
+        `}
             >
               <option className="text-yellow-400">Pending</option>
               <option className="text-accent">Selected</option>
@@ -160,10 +159,10 @@ export default function Dashboard() {
             <button
               onClick={() => handleUpdate(app._id)}
               className="
-                bg-primary text-white
-                px-4 py-2 rounded
-                text-sm
-              "
+          bg-primary text-white
+          h-[42px] px-4 rounded
+          text-sm
+        "
             >
               Update
             </button>
@@ -172,10 +171,10 @@ export default function Dashboard() {
             <button
               onClick={() => handleDelete(app._id)}
               className="
-                bg-primary text-white
-                px-4 py-2 rounded
-                text-sm
-              "
+          bg-primary text-white
+          h-[42px] px-4 rounded
+          text-sm
+        "
             >
               Delete
             </button>
